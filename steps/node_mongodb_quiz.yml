@@ -1,0 +1,57 @@
+id: node_mongodb_quiz
+learningObjectives:
+  - Evaluate your understanding of connecting Node.js and MongoDB
+hints:
+  - The `mongodb` package allows straightforward communication with MongoDB.
+  - Refer to the [Node MongoDB Driver
+    documentation](https://mongodb.github.io/node-mongodb-native/).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Why do you use the Node.js `mongodb` package when connecting Node.js
+              applications to MongoDB?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - To establish a server for Node.js.
+          - To connect to a MongoDB database from a Node.js application.
+          - To create user interfaces with Node.js.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Oops, Node.js itself is the server. Try again.
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Exactly! The package is a bridge between Node.js code and the database.
+            - actionId: finish_step
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Nope. That's more something for front-end technologies!
+            - actionId: replay_action
+              params:
+                actionName: quiz
