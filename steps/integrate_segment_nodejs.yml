@@ -22,7 +22,12 @@ startFlow:
       params:
         person: lucca
 trigger:
-  type: user_ready_response
+  type: user_message
+  params:
+    conditions:
+      - type: parse_user_response
+        params:
+          expectedResponse: "ok"
   flowNode:
     do:
       - actionId: finish_step
