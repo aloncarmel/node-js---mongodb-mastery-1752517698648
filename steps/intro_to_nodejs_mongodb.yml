@@ -1,0 +1,33 @@
+id: intro_to_nodejs_mongodb
+learningObjectives:
+  - Understand the purpose and advantages of Node.js and MongoDB
+hints:
+  - Think of Node.js as JavaScript for the server side.
+  - MongoDB handles data in JSON-like format, great for JavaScript.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to the quest on Node.js and MongoDB mastery! Get ready to bridge
+              the gap between front-end and back-end development using these two
+              powerful technologies.
+          - text: First things first, Node.js is a runtime environment that lets you execute
+              JavaScript on the server side. It's perfect for creating fast,
+              scalable network applications.
+          - text: On the flip side, MongoDB is an open-source NoSQL database capable of
+              storing JSON-like documents, making it a natural fit for
+              JavaScript environments like Node.js.
+          - text: Together, they form a dynamic duo for full-stack JavaScript development,
+              allowing you to easily manage data while creating responsive
+              applications quickly and efficiently.
+          - text: Ready to dive in and start working with this critical tech? Let's move on!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
