@@ -1,0 +1,33 @@
+id: understanding_mongodb_basics
+learningObjectives:
+  - Gain foundational knowledge of MongoDB and its role
+hints:
+  - MongoDB is Schemaless; it uses collections instead of tables.
+  - A great starting point for learning more is the official [MongoDB
+    Documentation](https://www.mongodb.com/docs/).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: MongoDB--think of it as a storage room for your data.
+          - text: MongoDB is different from traditional databases because it stores data in
+              a flexible, JSON-like format called BSON (Binary JSON). This makes
+              it super easy to integrate with Node.js apps.
+          - text: You'll want to set up a MongoDB server or use a service like [MongoDB
+              Atlas](https://www.mongodb.com/atlas) to manage your databases in
+              the cloud.
+          - text: With MongoDB, you get dynamic schemas, which means you don't need to
+              define your data structure upfront. This gives you flexibility as
+              your application evolves.
+          - text: Let's ensure you're comfortable with MongoDB basics before proceeding
+              ahead.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
