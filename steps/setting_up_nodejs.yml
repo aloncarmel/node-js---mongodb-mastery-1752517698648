@@ -1,0 +1,33 @@
+id: setting_up_nodejs
+learningObjectives:
+  - Learn how to set up a Node.js environment
+hints:
+  - Don't forget to install npm along with Node.js.
+  - Use `node -v` and `npm -v` to ensure they're installed properly.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Let's get our environment ready to tackle some code.
+          - text: First, you'll need to have Node.js installed on your machine. This
+              involves downloading from the official [Node.js
+              website](https://nodejs.org/) and following the installation
+              instructions.
+          - text: Once you have Node.js, you'll have access to npm, which is Node's package
+              manager. This will allow you to install additional libraries and
+              frameworks for your projects.
+          - text: Then, create a simple file, say `index.js`, and put a simple 'Hello World'
+              JavaScript program there. Run it using the terminal with `node
+              index.js`. Voilà! You're running JavaScript on the server side!
+          - text: Take your time to get this setup right, as this is where all the magic
+              will happen.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
