@@ -22,5 +22,6 @@ steps:
   - core_crud_operations
   - quiz_on_crud
   - open_question_exercise
+  - integrate_segment_nodejs
 type: MODULE
 repository: null
