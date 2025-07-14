@@ -1,0 +1,28 @@
+id: integrate_segment_nodejs
+learningObjectives:
+  - Understanding the purpose and benefits of using Segment in applications
+  - Setting up Segment in a Node.js environment
+  - Sending and receiving data events using Segment
+hints:
+  - Ensure you have your Segment write key ready for configuration
+  - Check Segment's documentation for Node.js integration examples
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Hello! Today, we're going to explore Segment, a powerful tool for managing and utilizing customer data in your applications.
+            delay: 2000
+          - text: We'll begin by integrating Segment into our Node.js application. This will allow us to track user actions and send data to various analytics tools.
+            delay: 2500
+          - text: Let's start by setting up the Segment library in our project and configuring it with your write key. Once that's done, we'll track a simple event.
+            delay: 3000
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
