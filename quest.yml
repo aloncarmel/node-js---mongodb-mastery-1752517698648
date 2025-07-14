@@ -21,7 +21,6 @@ steps:
   - node_mongodb_quiz
   - core_crud_operations
   - quiz_on_crud
-  - integrate_segmentio_with_nodejs
   - open_question_exercise
 type: MODULE
 repository: null
