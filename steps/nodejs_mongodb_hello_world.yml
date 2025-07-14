@@ -20,11 +20,17 @@ startFlow:
               MongoDB instance and print 'Hello World' from a database query.
           - text: This simple 'Hello World' task will form the foundation for more complex
               tasks ahead. Let's make sure this works smoothly!
-    - actionId: ready_message
-      params:
-        person: lucca
 trigger:
-  type: user_ready_response
+  type: github_pr_lifecycle_status
   flowNode:
     do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Great! You've successfully opened a pull request for the issue implementation. 🎉 "
+      - actionId: store_user_property
+        params:
+          name: prnumber
+          value: ${githubPrNumber}
       - actionId: finish_step
