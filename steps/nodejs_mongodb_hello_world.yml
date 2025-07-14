@@ -1,0 +1,30 @@
+id: nodejs_mongodb_hello_world
+learningObjectives:
+  - Create a simple Hello World application using Node.js and MongoDB
+hints:
+  - Don't forget to start your MongoDB server using `mongod`.
+  - Check the 'mongodb' package documentation for specific usage.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now that our environments are set, let's create a tiny application to see
+              Node.js and MongoDB in action.
+          - text: Start by initializing a new Node.js project in your working folder using
+              `npm init` to create a `package.json` file.
+          - text: Next, use npm to install the `mongodb` package using `npm install
+              mongodb`.
+          - text: In your `index.js` file, you can then write some code to connect to your
+              MongoDB instance and print 'Hello World' from a database query.
+          - text: This simple 'Hello World' task will form the foundation for more complex
+              tasks ahead. Let's make sure this works smoothly!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
