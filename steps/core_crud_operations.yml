@@ -1,0 +1,32 @@
+id: core_crud_operations
+learningObjectives:
+  - Understand how to perform basic CRUD operations with Node.js and MongoDB
+hints:
+  - CRUD operations are fundamental for database interactions.
+  - The [MongoDB CRUD Operations](https://www.mongodb.com/basics/crud) guide is
+    invaluable.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: CRUD operations--oh the backbone of any database-driven application.
+          - text: CRUD stands for Create, Read, Update, and Delete. These operations allow
+              you to handle data in your database.
+          - text: In MongoDB, these operations can be easily performed in Node.js using the
+              `mongodb` package we installed earlier.
+          - text: To create a document, you can use `insertOne()`; for reading, use
+              `find()`; for updating, there's `updateOne()`, and for deleting,
+              'deleteOne()'.
+          - text: These will let you manipulate your data efficiently and dynamically.
+          - text: Take some time to practice these operations, as they're pivotal for data
+              management in any sophisticated app.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
