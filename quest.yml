@@ -1,0 +1,32 @@
+id: nodejs_mongodb_intro
+title: Node.js & MongoDB Mastery
+subtitle: Harness Node.js & MongoDB for dynamic apps
+description: >-
+  Dive into the powerful world of back-end development by mastering Node.js and
+  MongoDB! In this quest, we'll explore how to build fast, scalable applications
+  using Node.js, a popular JavaScript runtime designed for scalable network
+  applications, and MongoDB, a leading NoSQL database that's perfect for
+  handling data in JSON-like documents.
+
+  You'll learn the basics of setting up a Node.js server, implementing routes, and connecting it seamlessly to a MongoDB database. Through hands-on exercises, we'll cover data models, CRUD operations (Create, Read, Update, Delete), and deploying a simple application using these technologies.
+
+  By the end of this quest, you'll have a solid foundation in building back-end applications with Node.js and MongoDB, equipping you with the skills needed to create robust, high-performance web services. Ready to launch your next big project with these tech giants? Let's get coding!
+level: beginner
+duration: 0.75
+skills:
+  - back-end development
+  - node.js
+  - mongodb
+  - javascript
+  - database management
+steps:
+  - intro_to_nodejs_mongodb
+  - setting_up_nodejs
+  - understanding_mongodb_basics
+  - nodejs_mongodb_hello_world
+  - node_mongodb_quiz
+  - core_crud_operations
+  - quiz_on_crud
+  - open_question_exercise
+type: MODULE
+repository: null
